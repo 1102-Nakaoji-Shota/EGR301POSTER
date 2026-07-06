@@ -9,10 +9,38 @@
 </head>
 <body>
   <header class="hero">
-    <section id="top" class="hero-content">
-      <p class="eyebrow">Academic Engineering Poster Companion</p>
-      <h1>SEM Building Renovation Project</h1>
-      <p class="subtitle">A digital companion for viewing the final poster, references, and supporting materials.</p>
+    <nav class="hero-nav" aria-label="University project header">
+      <a class="university-brand" href="https://www.unr.edu/" aria-label="University of Nevada, Reno homepage">
+        <span class="university-mark" aria-hidden="true">N</span>
+        <span class="university-lockup">
+          <span>University of Nevada, Reno</span>
+          <strong>College of Engineering</strong>
+        </span>
+      </a>
+      <p class="hero-tagline">Engineering Excellence. Innovation. Impact.</p>
+    </nav>
+
+    <section id="top" class="hero-content" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">UNIVERSITY OF NEVADA, RENO &middot; COLLEGE OF ENGINEERING</p>
+        <h1 id="hero-title">SEM Building Renovation Project</h1>
+        <p class="hero-subtitle">Engineering Feasibility Study</p>
+        <p class="hero-description">Opened in 1963, the Scrugham Engineering and Mines Building expanded engineering laboratories, faculty offices, and student classrooms. This digital companion presents the final poster, references, and supporting materials for the SEM renovation project.</p>
+
+        <div class="building-chips" aria-label="SEM building information">
+          <span>Building Code: SEM</span>
+          <span>Building Number: 056</span>
+          <span>Opened: 1963</span>
+        </div>
+      </div>
+
+      <a class="hero-poster-link" href="#final-poster" aria-label="View Final Poster">&darr; View Final Poster</a>
+
+      <figure class="hero-visual">
+        <img src="images/sem-building.jpg" alt="Scrugham Engineering and Mines Building" onerror="this.hidden=true; this.parentElement.classList.add('is-missing-image');">
+        <div class="hero-image-placeholder" aria-hidden="true">SEM Building Photo</div>
+        <figcaption>Scrugham Engineering and Mines Building</figcaption>
+      </figure>
     </section>
   </header>
 
@@ -21,12 +49,14 @@
       <div class="section-heading">
         <p class="eyebrow">Poster View</p>
         <h2>Final Poster</h2>
+        <p>High-resolution digital version of the final feasibility poster.</p>
       </div>
 
-      <!-- Replace this image path with the final high-resolution poster file. -->
-      <button id="poster-button" class="poster-button" type="button" data-image="images/final-poster.jpg" data-title="Final Poster" data-alt="Final poster for the SEM Building Renovation Project">
-        <img class="poster-image" src="images/final-poster.jpg" alt="Final poster for the SEM Building Renovation Project">
-      </button>
+      <div class="poster-showcase">
+        <button id="poster-button" class="poster-button" type="button" data-image="images/final-poster.png" data-title="Final Poster" data-alt="Final poster for the SEM Building Renovation Project">
+          <img class="poster-image" src="images/final-poster.png" alt="Final poster for the SEM Building Renovation Project">
+        </button>
+      </div>
     </section>
 
     <section id="references" class="section section-muted">
@@ -37,20 +67,6 @@
 
       <div id="references-list" class="references-list" aria-live="polite">
         <p class="loading-message">Loading references...</p>
-      </div>
-    </section>
-
-    <section id="downloads" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Supporting Files</p>
-        <h2>Downloads</h2>
-      </div>
-
-      <div class="download-grid">
-        <!-- Update these paths when the final PDF files are added. -->
-        <a class="download-button" href="downloads/final-poster.pdf">Final Poster PDF</a>
-        <a class="download-button" href="downloads/reference-list.pdf">Full Reference List</a>
-        <a class="download-button" href="downloads/supporting-documents.pdf">Supporting Documents</a>
       </div>
     </section>
   </main>

@@ -72,6 +72,10 @@ function renderReferences(references) {
 
   const referenceItems = references
     .map((reference) => {
+      if (reference.citation) {
+        return `<li>${formatCitation(reference.citation, reference.link)}</li>`;
+      }
+
       const title = escapeHtml(reference.title || "Untitled Reference");
       const source = escapeHtml(reference.source || "Source pending");
       const link = escapeHtml(reference.link || "#");
@@ -87,6 +91,20 @@ function renderReferences(references) {
     .join("");
 
   referencesList.innerHTML = `<ol class="reference-list">${referenceItems}</ol>`;
+}
+
+function formatCitation(citation, link) {
+  const safeCitation = escapeHtml(citation);
+  const safeLink = escapeHtml(link || "");
+
+  if (!safeLink) {
+    return safeCitation;
+  }
+
+  return safeCitation.replace(
+    safeLink,
+    `<a href="${safeLink}" target="_blank" rel="noopener noreferrer">${safeLink}</a>`
+  );
 }
 
 function escapeHtml(value) {
