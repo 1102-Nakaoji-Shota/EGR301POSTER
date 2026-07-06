@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEM Building Renovation Project</title>
+  <meta name="description" content="Digital companion for the SEM Building Renovation Project poster.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="hero-nav" aria-label="University project header">
+      <a class="university-brand" href="https://www.unr.edu/" aria-label="University of Nevada, Reno homepage">
+        <span class="university-mark" aria-hidden="true">N</span>
+        <span class="university-lockup">
+          <span>University of Nevada, Reno</span>
+          <strong>College of Engineering</strong>
+        </span>
+      </a>
+      <p class="hero-tagline">Engineering Excellence. Innovation. Impact.</p>
+    </nav>
+
+    <section id="top" class="hero-content" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">UNIVERSITY OF NEVADA, RENO &middot; COLLEGE OF ENGINEERING</p>
+        <h1 id="hero-title">SEM Building Renovation Project</h1>
+        <p class="hero-subtitle">Engineering Feasibility Study</p>
+        <p class="hero-description">Opened in 1963, the Scrugham Engineering and Mines Building expanded engineering laboratories, faculty offices, and student classrooms. This digital companion presents the final poster, references, and supporting materials for the SEM renovation project.</p>
+
+        <div class="building-chips" aria-label="SEM building information">
+          <span>Building Code: SEM</span>
+          <span>Building Number: 056</span>
+          <span>Opened: 1963</span>
+        </div>
+      </div>
+
+      <a class="hero-poster-link" href="#final-poster" aria-label="View Final Poster">&darr; View Final Poster</a>
+
+      <figure class="hero-visual">
+        <img src="images/sem-building.jpg" alt="Scrugham Engineering and Mines Building" onerror="this.hidden=true; this.parentElement.classList.add('is-missing-image');">
+        <div class="hero-image-placeholder" aria-hidden="true">SEM Building Photo</div>
+        <figcaption>Scrugham Engineering and Mines Building</figcaption>
+      </figure>
+    </section>
+  </header>
+
+  <main>
+    <section id="final-poster" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Poster View</p>
+        <h2>Final Poster</h2>
+        <p>High-resolution digital version of the final feasibility poster.</p>
+      </div>
+
+      <div class="poster-showcase">
+        <button id="poster-button" class="poster-button" type="button" data-image="images/final-poster.png" data-title="Final Poster" data-alt="Final poster for the SEM Building Renovation Project">
+          <img class="poster-image" src="images/final-poster.png" alt="Final poster for the SEM Building Renovation Project">
+        </button>
+      </div>
+    </section>
+
+    <section id="references" class="section section-muted">
+      <div class="section-heading">
+        <p class="eyebrow">Research Support</p>
+        <h2>References</h2>
+      </div>
+
+      <div id="references-list" class="references-list" aria-live="polite">
+        <p class="loading-message">Loading references...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Silver State Design Services. SEM Building Renovation Project.</p>
+  </footer>
+
+  <div id="image-lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Expanded poster image">
+      <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
+      <img id="lightbox-image" src="" alt="">
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
